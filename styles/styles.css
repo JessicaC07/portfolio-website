@@ -1,0 +1,445 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography body headings p
+--------------------------------------------- */
+@font-face {
+	font-family: "raleway";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url(../font/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: "raleway";
+	font-weight: 700;
+	font-style: bold;
+	font-display: swap;
+	src: url(../font/Raleway-Bold.ttf);
+}
+@font-face {
+	font-family: "nova";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url(../font/novamono-regular-webfont.woff2);
+}
+
+:root {
+	--brand-color: #f6bd60;
+	--text-color: rgb(84, 84, 84);
+	--accent-color: #93acc0;
+}
+
+::selection {
+	background: var(--brand-color);
+}
+
+body {
+	background-color: rgba(84, 84, 84, 0.1);
+	color: var(--text-color);
+	font-family: "raleway", arial;
+	line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "nova", arial;
+}
+
+h1 {
+	font-size: 2rem;
+	text-shadow: 1px 1px 1px var(--accent-color);
+	margin-left: 1rem;
+}
+
+h2 {
+	text-align: center;
+	line-height: 1.3;
+}
+
+
+@media (min-width: 39em) {
+	h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media (min-width: 62em) {
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+}
+
+
+/* Elements - ul ol dl figure table
+--------------------------------------------- */
+
+
+/* Links
+--------------------------------------------- */
+
+a {
+	color: var(--text-color);
+	text-decoration: underline dotted var(--brand-color);
+}
+
+
+a:hover {
+	border-top: solid var(--brand-color) 1px;
+	border-bottom: solid var(--brand-color) 1px;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+.dotted-background {
+	background-image: radial-gradient(rgb(147, 172, 192) 5%, transparent 5%);
+	background-position: 0 0;
+    background-size: 32px 32px;
+
+}
+
+@media (min-width: 39em) {
+	.above-fold {
+		min-height: 100vh;
+		min-width: 100vw;
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+
+header {
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+header img {
+	height: 3rem;
+}
+
+header ul {
+	padding: 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+a.logo-header:hover {
+	border: none;
+}
+
+nav.header-links {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 5rem;
+	background-color: var(--accent-color);
+	display: flex;
+	align-items: center;
+	z-index: 100;
+}
+
+nav.header-links li,
+nav.header-icons li {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}
+
+nav.header-links a {
+	color: #f7ede2;
+	text-decoration: none;
+	border: solid transparent 1px;
+	padding: 5px; 
+}
+
+nav.header-links a:hover {
+	border-color: var(--brand-color);
+}
+
+nav.header-icons a:hover {
+	border: none;
+}
+
+nav.header-icons img {
+	height: 2rem;
+}
+
+.chevron-icon {
+	max-width: 2rem;
+	display: block;
+	margin: 1rem auto 0 auto;
+}
+
+@media (min-width: 39em) {
+	header {
+		max-width: 40rem;
+		margin: 0 auto;
+	}
+	nav.header-links li {
+		font-size: 1.2rem;
+		margin: 0 0.5rem;
+	}
+
+	nav.header-links {
+		position: static;
+		background-color: transparent;
+	}
+	
+	nav.header-links a {
+		color: var(--text-color);
+	}
+
+	.chevron-icon {
+		max-width: 3rem;
+		margin: 2rem auto 0 auto;
+	}
+}
+
+@media (min-width: 62em) {
+	header {
+		max-width: 50rem;
+	}
+
+	header img {
+		height: 5rem;
+	}
+
+	nav.header-links li {
+		font-size: 1.5rem;
+		margin: 0 1rem;
+	}
+
+	nav.header-icons img {
+		height: 3rem;
+	}
+}
+
+
+/* Main
+--------------------------------------------- */
+
+#banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 60vh;
+
+}
+
+#banner h1 {
+	margin-top: 0;
+}
+
+main {
+	padding: 1.5rem;
+	max-width: 40rem;
+	margin: 0 auto;
+}
+
+main p {
+	max-width: 40rem;
+	margin: 0 auto;
+}
+
+main h2{
+	margin-top: 5rem;
+}
+
+
+/* Typing Effect */
+
+.typewriter p{
+	font-size: 0.8rem;
+	overflow: hidden;
+	border-right: .15em solid var(--brand-color);
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: .15em;
+	animation: 
+	  typing 3.5s steps(40, end),
+	  blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: var(--brand-color); }
+  }
+
+@media (min-width: 39em){
+	.typewriter p {
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 62em) {
+	main {
+		max-width: 50rem;
+	}
+
+	main p {
+		max-width: 50rem;
+	}
+
+	.typewriter p{
+		font-size: 1.3rem;
+	}
+}
+
+
+/* Cards */
+
+.card {
+	width: 15rem;
+	height: 15rem;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align: center;
+	box-shadow: 3px 3px 10px rgb(0 0 0 / 10%), 6px 15px 50px 3px rgb(0 0 0 / 20%);
+	background-color: rgba(247 237 226 / 20%);
+	margin: 1.5rem;
+}
+
+.card-button {
+	border: solid 2px #f7ede2;
+	display: inline-block;
+	padding: .3rem;
+	margin-top: .5rem;
+}
+.card-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card h3 {
+	margin: 0;
+}
+
+.card p {
+	margin-top: 0;
+}
+
+.card-image {
+	height: 70%;
+	width: 100%;
+	object-fit: cover;
+}
+
+/* 
+	1. Color and text decoration to remove default link style
+	2. Display block to make the whole link area clickable (inline by default)
+	3. Full height to make the whole card clickable
+*/
+.card-link {
+	color: inherit;
+  	text-decoration: inherit;
+	display: block;
+	position: relative;
+	height: 100%;
+}
+
+.card-link:hover {
+	border: none;
+}
+
+.card-overlay {
+	position: absolute;
+	bottom: 0;
+	left: -100%;
+	right: 0;
+	background-color: var(--brand-color);
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	transition: .5s ease;
+}
+
+.card-overlay h2 {
+	margin-bottom: 1rem;
+}
+
+.card-link:hover .card-overlay{
+	left: 0;
+}
+
+@media (min-width: 39em) {
+	.card:nth-child(odd) .card-overlay {
+		left: 100%;
+	}
+	
+	.card:nth-child(odd) .card-link:hover .card-overlay{
+		left: 0;
+	}
+}
+
+@media (min-width: 62em) {
+	.card {
+		height: 20rem;
+		width: 20rem;
+	}
+
+}
+
+
+/* Footer
+--------------------------------------------- */
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--brand-color);
+	padding: 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+}
+
+@media (min-width: 39em) {
+	footer {
+		margin-bottom: 0;
+	}
+}

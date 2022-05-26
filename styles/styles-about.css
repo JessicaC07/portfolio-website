@@ -1,0 +1,77 @@
+main{
+	max-width: 100%;
+    text-align: center;
+}
+
+main p {
+	margin-bottom: 2rem;
+}
+
+
+.chevron-icon {
+	margin-bottom: 5rem;
+}
+
+/* Testimonials */
+
+
+.testimonial img {
+    height: 8rem;
+    margin: 4rem 0 1rem 0;
+}
+
+.testimonial p {
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 62em){
+    .section-testimonial,
+    #chevron {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    #chevron {
+        text-align: justify;
+    }
+
+    .testimonial{
+        display: flex;
+    }
+
+    .testimonial {
+        text-align: justify;
+        margin: 0;
+    }
+
+    blockquote,
+    .section-testimonial p{
+        margin-left: 3rem;
+        margin-right: 0;
+    }
+
+    .section-testimonial p{
+        margin-bottom: 3rem;
+    }
+
+
+
+}
+
+/* Animation */
+
+@media (prefers-reduced-motion: no-preference) {
+    .slide-in {
+        animation: slide-in 1.5s ease-out;
+    }
+
+    @keyframes slide-in {
+        0% {
+            transform: translateX(300px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
