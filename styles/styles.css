@@ -200,6 +200,12 @@ nav.header-icons img {
 	height: 2rem;
 }
 
+nav.header-icons .git-icon img {
+	height: 1.7rem;
+	padding-top: 0.1rem;
+	margin-left: 0.5rem;
+}
+
 .chevron-icon {
 	max-width: 2rem;
 	display: block;
@@ -248,6 +254,11 @@ nav.header-icons img {
 	nav.header-icons img {
 		height: 3rem;
 	}
+
+	nav.header-icons .git-icon img {
+		height: 2.5rem;
+		padding-top: 0.2rem;
+	}
 }
 
 
@@ -281,6 +292,12 @@ main p {
 main h2{
 	margin-top: 5rem;
 }
+
+main .git-sentence {
+	text-align: center;
+	margin: 3rem 0;
+}
+
 
 
 /* Typing Effect */
@@ -422,6 +439,26 @@ main h2{
 		width: 20rem;
 	}
 
+}
+
+
+/* Skills part */
+
+#skills {
+	text-align: center;
+}
+#skills h3 {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+
+#skills span {
+	border: 1px solid var(--brand-color);
+	display: inline-block;
+	padding: 0.1rem 0.5rem;
+	margin: 0.5rem 0.2rem;
+	white-space: nowrap;
 }
 
 
