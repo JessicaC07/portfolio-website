@@ -20,6 +20,10 @@
 # Base
 --------------------------------------------------------------*/
 
+.hidden {
+	display: none;
+}
+
 /* Typography body headings p
 --------------------------------------------- */
 @font-face {
@@ -124,6 +128,10 @@ a:hover {
 
 }
 
+.home-buttons {
+	text-align: center;
+}
+
 @media (min-width: 39em) {
 	.above-fold {
 		min-height: 100vh;
@@ -135,6 +143,29 @@ a:hover {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+
+/* Filters */
+
+.filters {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.filters button {
+	background-color: transparent;
+	border: solid 1px var(--accent-color);
+	font-size: 1rem;
+	margin: .5rem .2rem;
+	padding: 0.4rem 0.7rem;
+	font-weight: bold;
+}
+
+.filters button:hover,
+.filters button.active {
+	background-color: var(--brand-color);
+	color: var(--text-color);
+	border: solid 1px var(--brand-color);
+}
 
 /* Header
 --------------------------------------------- */

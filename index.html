@@ -73,8 +73,16 @@
         <section id="projects">
             <h2>My Projects</h2>
             <p class="git-sentence">Most of the projects have their source code available on <a href="https://github.com/JessicaC07?tab=repositories" target=”_blank”>my GitHub</a>.</p>
+            <section class="filters">
+                <button data-target="all" class="active">All Projects</button>
+                <button data-target="html">HTML5 & CSS3</button>
+                <button data-target="js">JavaScript & React</button>
+                <button data-target="php">PHP & WordPress</button>
+                <button data-target="ecom">E-Commerce</button>
+                <button data-target="design">Design</button>
+            </section>
             <section class="card-wrapper">
-                <article class="card">
+                <article class="card" data-categories="js">
                     <a class="card-link" target="_blank" href="https://javascript-game-cards.netlify.app">
                         <img class="card-image" src="media/portfolio-javascript-game.png" alt="javascript matching card game preview on a laptop and mobile device">
                         <h3>JavaScript Game</h3>
@@ -88,7 +96,7 @@
                     </a>
                 </article>
 
-                <article class="card">
+                <article class="card" data-categories="html">
                     <a class="card-link" target="_blank" href="https://sass-gulp-replica.jessicalaporte.com">
                         <img class="card-image" src="media/portfolio-sass-landing-page.png" alt="landingpage replica preview on a laptop and mobile device">
                         <h3>SASS / Gulp</h3>
@@ -102,7 +110,7 @@
                     </a>
                 </article>
 
-                <article class="card">
+                <article class="card" data-categories="js html">
                     <a class="card-link" target="_blank" href="https://react-movie-api.jessicalaporte.com">
                         <img class="card-image" src="media/portfolio-react-movie-database.png" alt="movie api preview on a laptop and mobile device">
                         <h3>React/ SASS /API</h3>
@@ -116,7 +124,7 @@
                     </a>
                 </article>
 
-                <article class="card">
+                <article class="card" data-categories="js html">
                     <a class="card-link" target="_blank" href="https://open-ai-api.jessicalaporte.com">
                         <img class="card-image" src="media/portfolio-open-ai.png" alt="open api preview on a laptop and mobile device">
                         <h3>React / API</h3>
@@ -130,7 +138,7 @@
                     </a>
                 </article>
 
-                <article class="card">
+                <article class="card" data-categories="js">
                     <a class="card-link" target="_blank" href="https://react-calculator.jessicalaporte.com">
                         <img class="card-image" src="media/portfolio-react-calculator.png" alt="react calculator preview on a laptop and mobile device">
                         <h3>React</h3>
@@ -144,7 +152,7 @@
                     </a>
                 </article>
 
-                <article class="card">
+                <article class="card" data-categories="html">
                     <a class="card-link" target="_blank" href="https://html-country-site.jessicalaporte.com">
                         <img class="card-image" src="media/portfolio-html-website.png" alt="html country website preview on a laptop and mobile device">
                         <h3>HTML / CSS</h3>
@@ -156,7 +164,7 @@
                     </a>
                 </article>
 
-                <!-- <article class="card">
+                <article class="card" data-categories="php">
                     <a class="card-link" target="_blank" href="https://wp.jessicalaporte.com/wp-backend-mindset">
                         <img class="card-image" src="media/portfolio-wordpress-class.png" alt="backend wordpress preview on a laptop and mobile device">
                         <h3>WordPress</h3>
@@ -168,9 +176,9 @@
                             </div>
                         </div>
                     </a>
-                </article> -->
+                </article>
 
-                <article class="card">
+                <article class="card" data-categories="ecom">
                     <a class="card-link" target="_blank" href="https://gourmetattitude.com/">
                         <img class="card-image" src="media/Portfolio-Shopify-Gourmet-Attitude.png" alt="shopify gournet attitude website preview on a laptop and mobile device">
                         <h3>Shopify Website</h3>
@@ -184,7 +192,7 @@
                     </a>
                 </article>
 
-                <article class="card">
+                <article class="card" data-categories="design">
                     <a class="card-link" target="_blank" href="https://xd.adobe.com/view/73332430-72d2-45d2-8111-7c8e9d7a0612-2660/">
                         <img class="card-image" src="media/portfolio-movie-mockup-XD.png" alt="xd movie database mockups preview on a laptop and mobile device">
                         <h3>XD Mockup</h3>
@@ -238,9 +246,9 @@
 
         </section>
 
-        <section>
-            <a href="about/"><button class="first-bottom-button">About Me & Testimonials</button></a>
-            <a href="https://www.linkedin.com/in/jessicalaporte/" target=”_blan><button>Contact Me</button></a>
+        <section class="home-buttons">
+            <p><a href="about/"><button class="first-bottom-button">About Me & Testimonials</button></a></p>
+            <p><a href="https://www.linkedin.com/in/jessicalaporte/" target=”_blan><button>Contact Me</button></a></p>
         </section>
 
 
@@ -249,6 +257,6 @@
     <footer>
         <p>&copy 2022 Jessica Laporte</p>
     </footer>
-    
+    <script src="index.js"></script>
 </body>
 </html>
