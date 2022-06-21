@@ -1,4 +1,4 @@
-main{
+main {
 	max-width: 100%;
     text-align: center;
 }
@@ -7,9 +7,77 @@ main p {
 	margin-bottom: 2rem;
 }
 
+main #banner {
+    padding: 0;
+}
 
 .chevron-icon {
 	margin-bottom: 5rem;
+}
+
+
+/* About */
+
+#about {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+/* Education */
+
+.education-section {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.education-section h3{
+    margin-top: 3rem;
+}
+
+.education-section .p-before-hr {
+    margin-bottom: 3rem;
+}
+
+.education-section img {
+    height: 4rem;
+    margin-top: 2rem;
+}
+
+.education-section hr.solid {
+    border: 1px solid var(--brand-color);
+    width: 20%;
+}
+
+/* @media (min-width: 31em) {
+   .education-section {
+    max-width: 10rem;
+   }
+} */
+
+@media (min-width: 43em) {
+
+    .education-section .education-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .education-section hr.solid {
+        height: 30%;
+        width: 0px;
+        margin-top: 8rem;
+    }
+
+    .education-section .education-items div {
+        max-width: 40%;
+    }
+
+}
+
+@media (min-width: 62em) {
+    .education-section {
+        max-width: 50rem;
+    }
 }
 
 /* Testimonials */
@@ -25,10 +93,11 @@ main p {
 }
 
 
+
 @media (min-width: 62em){
     .section-testimonial,
     #chevron {
-        max-width: 40rem;
+        max-width: 50rem;
         margin: 0 auto;
     }
 

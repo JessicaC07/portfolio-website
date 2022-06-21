@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/normalize-fwd.css">
 	<link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/modals.css">
 
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
@@ -77,27 +78,65 @@
                 <button data-target="all" class="active">All Projects</button>
                 <button data-target="html">HTML5 & CSS3</button>
                 <button data-target="js">JavaScript & React</button>
-                <button data-target="php">PHP & WordPress</button>
+                <!-- <button data-target="php">PHP & WordPress</button> -->
                 <button data-target="ecom">E-Commerce</button>
                 <button data-target="design">Design</button>
             </section>
             <section class="card-wrapper">
                 <article class="card" data-categories="js">
-                    <a class="card-link" target="_blank" href="https://javascript-game-cards.netlify.app">
+                    <div class="card-link" data-modal="js-game-modal">
                         <img class="card-image" src="media/portfolio-javascript-game.png" alt="javascript matching card game preview on a laptop and mobile device">
                         <h3>JavaScript Game</h3>
                         <div class="card-overlay">
-                            <!-- <div class="text"> TO REMOVE -->
+                            <!-- <div class="text"> -->
                                 <h2>JavaScript</h2>
                                 <p>Matching Cards</p>
                                 <span class="card-button">View this Poject</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal closed" id="js-game-modal">
+                        <button class="close-button">X close</button>
+                        <div class="modal-content">
+                            <h1>JavaScript Matching Cards Game</h1>
+                            <img src="media/portfolio-javascript-game.png" alt="javascript game mockup"/>
+                            <p>I developed a matching card game (8, 12 and 18 cards) for kids displaying wild and marine animals as I am passionate about the wildlife. To develop the game, I used JavaScript, as well as jQuery and Bootstrap.</p>
+                            <h2>Tools Used</h2>
+                            <div class="tool-icons">
+                                <img src="media/js-logo.png" alt="javascript logo">
+                                <img src="media/jQuery-logo.png" alt="jquery logo">
+                                <img src="media/bootstrap-logo.png" alt="bootstrap logo">
+                                <div>
+                                    <img src="media/html-logo.png" alt="html logo">
+                                    <img src="media/css-logo.png" alt="css logo">
+                                </div>
+                            </div>
+                            <div class="modal-btns">
+                                <p><a href="https://github.com/JessicaC07/javascript-game" target="_blank"><button>GitHub Repository</button></a></p>
+                                <p><a href="https://javascript-game-cards.netlify.app" target="_blank"><button>Live URL</button></a></p>
+                            </div>
+                            <div class="modal-details">
+                                <h2>Project Details</h2>
+                                <h3>Responsiveness:</h3>
+                                <div>Desktop</div>
+                                <h3>Project Type:</h3>
+                                <div>Individual</div>
+                                <h3>Project Duration</h3>
+                                <div>1 week</div>
+                                <h3>Challenges & Learnings:</h3>
+                                <div>Remembering which first card was flipped was a bit challenging. After doing some research, I found out that adding an additional property in the game object was the solution.<br>I also enjoyed using jQuery and Bootstrap as they are making the coding and styling easier. However, I don't think I would use Boostrap again as the customization is very limited ending up with similar designs. Libraries can also slow down the website that can impact your UX and SEO.</div>
+                            </div>
+                            <div class="modal-bottom-btns">
+                                <p><a href="https://bcit.jessicalaporte.com/#projects"><button>See All Projects</button></a></p>
+                                <p><a href="https://bcit.jessicalaporte.com/about/"><button>More About Me</button></a></p>
+                            </div>
+                        </div>
+                      </div>
                 </article>
 
                 <article class="card" data-categories="html">
-                    <a class="card-link" target="_blank" href="https://sass-gulp-replica.jessicalaporte.com">
+                    <div class="card-link" data-modal="lp-replica-modal">
                         <img class="card-image" src="media/portfolio-sass-landing-page.png" alt="landingpage replica preview on a laptop and mobile device">
                         <h3>SASS / Gulp</h3>
                         <div class="card-overlay">
@@ -107,11 +146,50 @@
                                 <span class="card-button">View this Poject</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal closed" id="lp-replica-modal">
+                        <button class="close-button">X close</button>
+                        <div class="modal-content">
+                            <h1>Landing Page Replica</h1>
+                            <img src="media/portfolio-sass-landing-page.png" alt="landing page replica mockup"/>
+                            <p>With my teammate, we developed an exact replica of an exisiting landing page. He worked from the bottom and I worked from the top. We used SASS, Gulp and the library Slick for the different sliders. We developed the landing page mobile first and made it fully responsive.</p>
+                            <h2>Tools Used</h2>
+                            <div class="tool-icons">
+                                <img src="media/sass-logo.png" alt="sass logo">
+                                <img src="media/gulp-logo.png" alt="gulp logo">
+                                <img src="media/slick-logo.png" alt="slick logo">
+                                <div>
+                                    <img src="media/js-logo.png" alt="javascript logo">
+                                    <img src="media/html-logo.png" alt="html logo">
+                                    <img src="media/css-logo.png" alt="css logo">
+                                </div>
+                            </div>
+                            <div class="modal-btns">
+                                <p><a href="https://github.com/JessicaC07/sass-landing-page" target="_blank"><button>GitHub Repository</button></a></p>
+                                <p><a href="https://sass-gulp-replica.jessicalaporte.com/" target="_blank"><button>Live URL</button></a></p>
+                            </div>
+                            <div class="modal-details">
+                                <h2>Project Details</h2>
+                                <h3>Responsiveness:</h3>
+                                <div>All devices</div>
+                                <h3>Project Type:</h3>
+                                <div>Group of two - I worked from the top until the "Our Story" section.</div>
+                                <h3>Project Duration</h3>
+                                <div>1 week</div>
+                                <h3>Challenges & Learnings:</h3>
+                                <div>It was the first time I was using the library Slick and this was quite challenging. I believe the library isn't regularly updated anymore and the documentation is pretty light. I had to use my own code to make the sliders work properly. When I will need sliders, I will do thorough research and find a better library.<br> Something that was successful was to work with my teammate, using Slack and Zoom for communication. When you trust each other and have an open communication, things go very well.</div>
+                            </div>
+                            <div class="modal-bottom-btns">
+                                <p><a href="https://bcit.jessicalaporte.com/#projects"><button>See All Projects</button></a></p>
+                                <p><a href="https://bcit.jessicalaporte.com/about/"><button>More About Me</button></a></p>
+                            </div>
+                        </div>
+                      </div>
                 </article>
 
                 <article class="card" data-categories="js html">
-                    <a class="card-link" target="_blank" href="https://react-movie-api.jessicalaporte.com">
+                    <div class="card-link" data-modal="movie-database-modal">
                         <img class="card-image" src="media/portfolio-react-movie-database.png" alt="movie api preview on a laptop and mobile device">
                         <h3>React/ SASS /API</h3>
                         <div class="card-overlay">
@@ -121,11 +199,50 @@
                                 <span class="card-button">View this Poject</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal closed" id="movie-database-modal">
+                        <button class="close-button">X close</button>
+                        <div class="modal-content">
+                            <h1>Movie Database App</h1>
+                            <img src="media/portfolio-react-movie-database.png" alt="movie database mockup"/>
+                            <p>With my teammate, we built a movie database website with React that uses real time data from The Movie Database TMDb API. It started with a high fidelity mockup I created on Photoshop and then exported to Adobe XD adding animations. You can find the <a href="https://xd.adobe.com/view/73332430-72d2-45d2-8111-7c8e9d7a0612-2660/" target="_blank">XD mockup on my projects</a>.</p>
+                            <h2>Tools Used</h2>
+                            <div class="tool-icons">
+                                <img src="media/react-logo.png" alt="react logo">
+                                <img src="media/sass-logo.png" alt="sass logo">
+                                <img src="media/rest-logo.png" alt="rest api logo">
+                                <div>
+                                    <img src="media/js-logo.png" alt="javascript logo">
+                                    <img src="media/html-logo.png" alt="html logo">
+                                    <img src="media/css-logo.png" alt="css logo">
+                                </div>
+                            </div>
+                            <div class="modal-btns">
+                                <p><a href="https://github.com/JessicaC07/movie-database-react" target="_blank"><button>GitHub Repository</button></a></p>
+                                <p><a href="https://react-movie-api.jessicalaporte.com" target="_blank"><button>Live URL</button></a></p>
+                            </div>
+                            <div class="modal-details">
+                                <h2>Project Details</h2>
+                                <h3>Responsiveness:</h3>
+                                <div>All devices</div>
+                                <h3>Project Type:</h3>
+                                <div>Group of two</div>
+                                <h3>Project Duration</h3>
+                                <div>2 weeks</div>
+                                <h3>Challenges & Learnings:</h3>
+                                <div>This was my first major React project. The most challenging was to add the favourite feature as we had to keep track of state across different pages.<br> Styling the movie card was also quite challenging to make sure all content was responsive and fitting within the card.</div>
+                            </div>
+                            <div class="modal-bottom-btns">
+                                <p><a href="https://bcit.jessicalaporte.com/#projects"><button>See All Projects</button></a></p>
+                                <p><a href="https://bcit.jessicalaporte.com/about/"><button>More About Me</button></a></p>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <article class="card" data-categories="js html">
-                    <a class="card-link" target="_blank" href="https://open-ai-api.jessicalaporte.com">
+                    <div class="card-link" data-modal="sentiment-ai-modal">
                         <img class="card-image" src="media/portfolio-open-ai.png" alt="open api preview on a laptop and mobile device">
                         <h3>React / API</h3>
                         <div class="card-overlay">
@@ -135,10 +252,49 @@
                                 <span class="card-button">View this Poject</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal closed" id="sentiment-ai-modal">
+                        <button class="close-button">X close</button>
+                        <div class="modal-content">
+                            <h1>Sentiment AI</h1>
+                            <img src="media/portfolio-open-ai.png" alt="movie database mockup"/>
+                            <p>I developed a Sentiment AI app using the Open AI API. The app allows to extract sentiment in a given string of text or icons. I then created the styling of the page to make it more user-friendly.</p>
+                            <h2>Tools Used</h2>
+                            <div class="tool-icons">
+                                <img src="media/react-logo.png" alt="react logo">
+                                <img src="media/sass-logo.png" alt="sass logo">
+                                <img src="media/rest-logo.png" alt="rest api logo">
+                                <div>
+                                    <img src="media/js-logo.png" alt="javascript logo">
+                                    <img src="media/html-logo.png" alt="html logo">
+                                    <img src="media/css-logo.png" alt="css logo">
+                                </div>
+                            </div>
+                            <div class="modal-btns">
+                                <p><a href="https://github.com/JessicaC07/sentiment-open-ai" target="_blank"><button>GitHub Repository</button></a></p>
+                                <p><a href="https://open-ai-api.jessicalaporte.com" target="_blank"><button>Live URL</button></a></p>
+                            </div>
+                            <div class="modal-details">
+                                <h2>Project Details</h2>
+                                <h3>Responsiveness:</h3>
+                                <div>All devices</div>
+                                <h3>Project Type:</h3>
+                                <div>Individual</div>
+                                <h3>Project Duration</h3>
+                                <div>2 days</div>
+                                <h3>Challenges & Learnings:</h3>
+                                <div>One challenge I run into was the fact that the API key needed to be protected. For this I had to use an environment variable, and adding it to Netlify as well. The key is still not fully protected as it is visible in the JavaScript source code. This only solution for that is using a server-side component to make the API requests but this was out of scope.</div>
+                            </div>
+                            <div class="modal-bottom-btns">
+                                <p><a href="https://bcit.jessicalaporte.com/#projects"><button>See All Projects</button></a></p>
+                                <p><a href="https://bcit.jessicalaporte.com/about/"><button>More About Me</button></a></p>
+                            </div>
+                        </div>
+                      </div>
                 </article>
 
-                <article class="card" data-categories="js">
+                <!-- <article class="card" data-categories="js">
                     <a class="card-link" target="_blank" href="https://react-calculator.jessicalaporte.com">
                         <img class="card-image" src="media/portfolio-react-calculator.png" alt="react calculator preview on a laptop and mobile device">
                         <h3>React</h3>
@@ -150,21 +306,55 @@
                             </div>
                         </div>
                     </a>
-                </article>
+                </article> -->
 
                 <article class="card" data-categories="html">
-                    <a class="card-link" target="_blank" href="https://html-country-site.jessicalaporte.com">
-                        <img class="card-image" src="media/portfolio-html-website.png" alt="html country website preview on a laptop and mobile device">
+                    <div class="card-link" data-modal="becca-borah-modal">
+                        <img class="card-image" src="media/portfolio-becca-borah.png" alt="becca borah website preview on a laptop and mobile device">
                         <h3>HTML / CSS</h3>
                         <div class="card-overlay">
                             <h2>HTML / CSS</h2>
-                            <p>Country Website</p>
+                            <p>Becca Borah's Website</p>
                             <span class="card-button">View this Poject</span>
                         </div>
-                    </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal closed" id="becca-borah-modal">
+                        <button class="close-button">X close</button>
+                        <div class="modal-content">
+                            <h1>Becca Borah's Website</h1>
+                            <img src="media/portfolio-becca-borah.png" alt="becca borah website mockup"/>
+                            <p>This was a short project for a painter who needed a website very quickly as she was going to attend events. I developed her website in less than a day respecting the exact design, color scheme she wanted and focusing on SEO. This project is pretty simple from a technical point of view but is important to me as the painter is my sister.</p>
+                            <h2>Tools Used</h2>
+                            <div class="tool-icons">
+                                <img src="media/js-logo.png" alt="javascript logo">
+                                <img src="media/html-logo.png" alt="html logo">
+                                <img src="media/css-logo.png" alt="css logo">
+                            </div>
+                            <div class="modal-btns">
+                                <p><a href="https://github.com/JessicaC07/becca-borah" target="_blank"><button>GitHub Repository</button></a></p>
+                                <p><a href="https://beccaborah.fr" target="_blank"><button>Live URL</button></a></p>
+                            </div>
+                            <div class="modal-details">
+                                <h2>Project Details</h2>
+                                <h3>Responsiveness:</h3>
+                                <div>All devices</div>
+                                <h3>Project Type:</h3>
+                                <div>Individual</div>
+                                <h3>Project Duration</h3>
+                                <div>8 hours</div>
+                                <h3>Challenges & Learnings:</h3>
+                                <div>This project was time-sensitive and personal so I felt more stressed than usual and demanding towards myself. I learned that it is key to be in the right mindset while developing but also that you need to trust your skills.</div>
+                            </div>
+                            <div class="modal-bottom-btns">
+                                <p><a href="https://bcit.jessicalaporte.com/#projects"><button>See All Projects</button></a></p>
+                                <p><a href="https://bcit.jessicalaporte.com/about/"><button>More About Me</button></a></p>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="card" data-categories="php">
+                <!-- <article class="card" data-categories="php">
                     <a class="card-link" target="_blank" href="https://wp.jessicalaporte.com/wp-backend-mindset">
                         <img class="card-image" src="media/portfolio-wordpress-class.png" alt="backend wordpress preview on a laptop and mobile device">
                         <h3>WordPress</h3>
@@ -176,10 +366,10 @@
                             </div>
                         </div>
                     </a>
-                </article>
+                </article> -->
 
                 <article class="card" data-categories="ecom">
-                    <a class="card-link" target="_blank" href="https://gourmetattitude.com/">
+                    <div class="card-link" data-modal="gourmet-attitude-modal">
                         <img class="card-image" src="media/Portfolio-Shopify-Gourmet-Attitude.png" alt="shopify gournet attitude website preview on a laptop and mobile device">
                         <h3>Shopify Website</h3>
                         <div class="card-overlay">
@@ -189,11 +379,42 @@
                                 <span class="card-button">View this Poject</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal closed" id="gourmet-attitude-modal">
+                        <button class="close-button">X close</button>
+                        <div class="modal-content">
+                            <h1>Gourmet Attitude Website</h1>
+                            <img src="media/Portfolio-Shopify-Gourmet-Attitude.png" alt="becca borah website mockup"/>
+                            <p>I was working in New York City as an E-commerce Manager for Gourmet Attitude that sells fresh truffles and truffle products. One of the goals was to sell more products to private customers on top of selling to hgh-end restaurants mainly. It was my role to create and maintain the Shopify site working with a backend developer. I created the site from mockups, design to implementation and testing.</p>
+                            <h2>Tools Used</h2>
+                            <div class="tool-icons">
+                                <img src="media/shopify-logo.png">
+                            </div>
+                            <div class="modal-btns">
+                                <p class="no-git-repository"><a href="https://gourmetattitude.com/" target="_blank"><button>Live URL</button></a></p>
+                            </div>
+                            <div class="modal-details">
+                                <h2>Project Details</h2>
+                                <h3>Responsiveness:</h3>
+                                <div>All devices</div>
+                                <h3>Project Type:</h3>
+                                <div>Individual</div>
+                                <h3>Project Duration</h3>
+                                <div>3 weeks</div>
+                                <h3>Challenges & Learnings:</h3>
+                                <div>This was my first major e-commerce project. As I was working in a small company, I had to learn and find resources/ answers on my own. In the end, this was very rewarding as Shopify does have great documentation. One challenge I faced was the fact that the website wasn't very responsive on mobile and couldn't fix this myself as I didn't have the coding skills I have today. I ended up hiring a Shopify developer and the collaboration went very well and my report was very happy with the final product.</div>
+                            </div>
+                            <div class="modal-bottom-btns">
+                                <p><a href="https://bcit.jessicalaporte.com/#projects"><button>See All Projects</button></a></p>
+                                <p><a href="https://bcit.jessicalaporte.com/about/"><button>More About Me</button></a></p>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <article class="card" data-categories="design">
-                    <a class="card-link" target="_blank" href="https://xd.adobe.com/view/73332430-72d2-45d2-8111-7c8e9d7a0612-2660/">
+                    <div class="card-link" data-modal="xd-mockup-modal">
                         <img class="card-image" src="media/portfolio-movie-mockup-XD.png" alt="xd movie database mockups preview on a laptop and mobile device">
                         <h3>XD Mockup</h3>
                         <div class="card-overlay">
@@ -203,7 +424,39 @@
                                 <span class="card-button">View this Poject</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal closed" id="xd-mockup-modal">
+                        <button class="close-button">X close</button>
+                        <div class="modal-content">
+                            <h1>Movie Database Mockup Adobe XD</h1>
+                            <img src="media/portfolio-movie-mockup-XD.png" alt="abode XD mockup by Jessica Laporte"/>
+                            <p>After creating a <a target="_blank" href="https://drive.google.com/drive/folders/1ObBVaXctDMxpJXZBlIvyhyMtxv18uNL9?usp=sharing">high-fidelity mockup on Photoshop</a>, I exported it to Adobe XD so it is easier to share and collaborate on the document directly. I then added all the necessary animations so I knew exactly what the internal linking and design should look like.</p>
+                            <h2>Tools Used</h2>
+                            <div class="tool-icons">
+                                <img src="media/ps-logo.png">
+                                <img src="media/xd-logo.png">
+                            </div>
+                            <div class="modal-btns">
+                                <p class="no-git-repository"><a href="https://xd.adobe.com/view/73332430-72d2-45d2-8111-7c8e9d7a0612-2660/" target="_blank"><button>Live URL</button></a></p>
+                            </div>
+                            <div class="modal-details">
+                                <h2>Project Details</h2>
+                                <h3>Responsiveness:</h3>
+                                <div>Desktop & Mobile Mockups</div>
+                                <h3>Project Type:</h3>
+                                <div>Indidivual</div>
+                                <h3>Project Duration</h3>
+                                <div>1 day</div>
+                                <h3>Challenges & Learnings:</h3>
+                                <div>Creating the mockup on Photoshop was very time-consuming in order to have a detailed and consistent mockup for desktop and mobile. However, the process of exporting it to Adobe XD was very easy, as well as adding the animations.</div>
+                            </div>
+                            <div class="modal-bottom-btns">
+                                <p><a href="https://bcit.jessicalaporte.com/#projects"><button>See All Projects</button></a></p>
+                                <p><a href="https://bcit.jessicalaporte.com/about/"><button>More About Me</button></a></p>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
             </section>
@@ -257,6 +510,8 @@
     <footer>
         <p>&copy 2022 Jessica Laporte</p>
     </footer>
+    <!-- Modal overlay -->
+    <div class="modal-overlay closed" id="modal-overlay"></div>
     <script src="index.js"></script>
 </body>
 </html>

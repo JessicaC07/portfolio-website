@@ -59,7 +59,7 @@
 }
 
 body {
-	background-color: rgba(84, 84, 84, 0.1);
+	background-color: #ededed;
 	color: var(--text-color);
 	font-family: "raleway", arial;
 	line-height: 1.7;
@@ -135,7 +135,6 @@ a:hover {
 @media (min-width: 39em) {
 	.above-fold {
 		min-height: 100vh;
-		min-width: 100vw;
 	}
 }
 
@@ -219,7 +218,8 @@ nav.header-links a {
 	padding: 5px; 
 }
 
-nav.header-links a:hover {
+nav.header-links a:hover,
+nav.header-links a.current {
 	border-color: var(--brand-color);
 }
 
@@ -291,6 +291,7 @@ nav.header-icons .git-icon img {
 		padding-top: 0.2rem;
 	}
 }
+
 
 
 /* Main
@@ -432,6 +433,7 @@ main .git-sentence {
 
 .card-link:hover {
 	border: none;
+	cursor: pointer;
 }
 
 .card-overlay {
