@@ -212,15 +212,22 @@ nav.header-icons li {
 }
 
 nav.header-links a {
-	color: #f7ede2;
 	text-decoration: none;
 	border: solid transparent 1px;
 	padding: 5px; 
+
+	box-shadow: inset 0 0 0 0 var(--accent-color);
+	color: var(--accent-color);
+	padding: .5rem;
+	margin: 0 -.25rem;
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 nav.header-links a:hover,
 nav.header-links a.current {
-	border-color: var(--brand-color);
+	color: #f7ede2;
+  	box-shadow: inset 200px 0 0 0 var(--accent-color);
+	/* border-color: var(--brand-color); */
 }
 
 nav.header-icons a:hover {
