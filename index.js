@@ -13,6 +13,12 @@ const iso = new Isotope( elem, {
 btns.forEach(function(eachBtn){
     eachBtn.addEventListener('click', function(){
         const btnCategory = eachBtn.dataset.target;
+        
+        btns.forEach(function(eachBtn){
+            eachBtn.classList.remove('active');
+        })
+
+        eachBtn.classList.add('active');
 
         if (btnCategory === "all") {
             iso.arrange({ filter: '*' });
