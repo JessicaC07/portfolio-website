@@ -1,27 +1,24 @@
 const btns = document.querySelectorAll('.filters button');
 const cards = document.querySelectorAll('article.card');
 
-// console.log(cards)
-const onButtonFilterClick = function(buttonClicked) {
-    const btnCategory = buttonClicked.dataset.target;
-    btns.forEach(function(eachBtn){
-        eachBtn.classList.remove('active');
-    })
-    buttonClicked.classList.add('active');
-    cards.forEach(function(eachCard){
-        const cardCategories = eachCard.dataset.categories;
+// Isotope
 
-        if (cardCategories.includes(btnCategory) || btnCategory === "all"){
-            eachCard.classList.remove('hidden');
-        } else {
-            eachCard.classList.add('hidden');
-        }
-    })
-}
+const elem = document.querySelector('.card-wrapper');
+const iso = new Isotope( elem, {
+  // options
+  itemSelector: '.card',
+  layoutMode: 'fitRows'
+});
 
 btns.forEach(function(eachBtn){
     eachBtn.addEventListener('click', function(){
-        onButtonFilterClick(eachBtn);
+        const btnCategory = eachBtn.dataset.target;
+
+        if (btnCategory === "all") {
+            iso.arrange({ filter: '*' });
+        } else {
+            iso.arrange({ filter: `.${btnCategory}` });
+        }
     })
 })
 

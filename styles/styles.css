@@ -267,9 +267,9 @@ nav.header-icons .git-icon img {
 		transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
 	}
 	
-	/* nav.header-links a:visited {
+	nav.header-links a:visited {
 		color: var(--text-color);
-	} */
+	}
 
 	nav.header-links a:hover,
 	nav.header-links a.current {
