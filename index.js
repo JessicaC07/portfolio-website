@@ -7,7 +7,7 @@ const elem = document.querySelector('.card-wrapper');
 const iso = new Isotope( elem, {
   // options
   itemSelector: '.card',
-  layoutMode: 'fitRows'
+  layoutMode: 'fitRowsCentered'
 });
 
 btns.forEach(function(eachBtn){
