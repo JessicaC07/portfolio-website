@@ -1,4 +1,4 @@
-const btns = document.querySelectorAll('.filters button');
+const filterBtns = document.querySelectorAll('.filters button');
 const cards = document.querySelectorAll('article.card');
 
 // Isotope
@@ -10,23 +10,37 @@ const iso = new Isotope( elem, {
   layoutMode: 'fitRowsCentered'
 });
 
-btns.forEach(function(eachBtn){
-    eachBtn.addEventListener('click', function(){
-        const btnCategory = eachBtn.dataset.target;
-        
-        btns.forEach(function(eachBtn){
-            eachBtn.classList.remove('active');
-        })
+const selectCategory = (btn) => {
+    const btnCategory = btn.dataset.target;
+    location.hash = btnCategory;
 
-        eachBtn.classList.add('active');
+    filterBtns.forEach(function(eachBtn){
+        eachBtn.classList.remove('active');
+    })
+    btn.classList.add('active');
 
-        if (btnCategory === "all") {
-            iso.arrange({ filter: '*' });
-        } else {
-            iso.arrange({ filter: `.${btnCategory}` });
-        }
+    if (btnCategory === "all") {
+        iso.arrange({ filter: '*' });
+    } else {
+        iso.arrange({ filter: `.${btnCategory}` });
+    }
+}
+
+filterBtns.forEach(function(filterBtn){
+    filterBtn.addEventListener('click', function(){
+        selectCategory(filterBtn);
     })
 })
+
+if (location.hash){
+    const categoryBtn = document.querySelector(`[data-target=${location.hash.substring(1)}]`);
+
+    if (categoryBtn) {
+        selectCategory(categoryBtn);
+        categoryBtn.scrollIntoView();
+        window.scrollBy(0, -20);
+    }
+}
 
 
 // Modals
