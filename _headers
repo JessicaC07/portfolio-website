@@ -1,0 +1,10 @@
+# Cache fonts forever
+/font/*
+  Cache-Control: public
+  Cache-Control: max-age=365000000
+  Cache-Control: immutable
+
+# Cache images for a week
+/media/*
+  Cache-Control: public
+  Cache-Control: max-age=604800
